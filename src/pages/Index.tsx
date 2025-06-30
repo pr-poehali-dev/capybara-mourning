@@ -4,22 +4,23 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import SadCapybara from "@/components/SadCapybara";
 import MemorialSection from "@/components/MemorialSection";
+import MemoryGame from "@/components/MemoryGame";
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState("memorial");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-100 via-purple-50 to-slate-200">
+    <div className="min-h-screen bg-gradient-to-b from-yellow-100 via-orange-50 to-yellow-200">
       {/* Header */}
       <header className="text-center py-12 px-4">
         <div className="flex justify-center items-center gap-4 mb-6">
           <SadCapybara />
           <div>
-            <h1 className="text-5xl font-bold text-slate-800 mb-2 font-montserrat">
-              В память о Шахтерах
+            <h1 className="text-5xl font-bold text-yellow-800 mb-2 font-montserrat">
+              В память о Шахтерах Желтых
             </h1>
-            <p className="text-xl text-slate-600 font-open-sans">
-              Pony Town помнит своих героев 💔
+            <p className="text-xl text-yellow-700 font-open-sans">
+              Pony Town помнит своих желтых героев 💛💔
             </p>
           </div>
           <SadCapybara />
@@ -67,60 +68,34 @@ const Index = () => {
         {currentSection === "memorial" && <MemorialSection />}
 
         {currentSection === "history" && (
-          <Card className="bg-white/80 backdrop-blur-sm border-purple-200">
+          <Card className="bg-white/80 backdrop-blur-sm border-yellow-300">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-montserrat text-slate-800">
-                История группы Шахтеры
+              <CardTitle className="text-3xl font-montserrat text-yellow-800">
+                История группы Шахтеры Желтые
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 font-open-sans">
               <p className="text-lg text-slate-700">
-                Группа "Шахтеры" была легендарным сообществом в Pony Town,
-                которое объединяло множество игроков вокруг общих интересов и
-                дружбы...
+                Группа "Шахтеры Желтые" была легендарным сообществом в Pony
+                Town, которое объединяло множество игроков в желтых касках
+                вокруг общих интересов и золотой дружбы...
               </p>
-              <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-300">
+              <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
                 <p className="italic text-slate-600">
-                  "Мы были не просто группой - мы были семьей..." - один из
-                  участников
+                  "Мы были не просто группой - мы были семьей в желтых
+                  касках..." - один из участников
                 </p>
               </div>
             </CardContent>
           </Card>
         )}
 
-        {currentSection === "game" && (
-          <Card className="bg-white/80 backdrop-blur-sm border-purple-200">
-            <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-montserrat text-slate-800">
-                Игра "Собери всех Шахтеров"
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-center space-y-6">
-              <p className="text-lg text-slate-700 font-open-sans">
-                Помоги капибарам собрать всех участников группы в памятные
-                коробки
-              </p>
-              <div className="bg-purple-100 p-8 rounded-lg">
-                <Icon
-                  name="Package"
-                  size={64}
-                  className="mx-auto mb-4 text-purple-600"
-                />
-                <p className="text-slate-600 mb-4">Игра скоро будет доступна</p>
-                <Button className="font-open-sans">
-                  <Icon name="Play" size={16} className="mr-2" />
-                  Начать игру
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        )}
+        {currentSection === "game" && <MemoryGame />}
 
         {currentSection === "gallery" && (
-          <Card className="bg-white/80 backdrop-blur-sm border-purple-200">
+          <Card className="bg-white/80 backdrop-blur-sm border-yellow-300">
             <CardHeader className="text-center">
-              <CardTitle className="text-3xl font-montserrat text-slate-800">
+              <CardTitle className="text-3xl font-montserrat text-yellow-800">
                 Галерея воспоминаний
               </CardTitle>
             </CardHeader>
@@ -128,10 +103,10 @@ const Index = () => {
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div
                   key={i}
-                  className="bg-purple-50 p-4 rounded-lg text-center"
+                  className="bg-yellow-50 p-4 rounded-lg text-center"
                 >
-                  <div className="w-full h-32 bg-purple-200 rounded mb-2 flex items-center justify-center">
-                    <Icon name="Users" size={32} className="text-purple-400" />
+                  <div className="w-full h-32 bg-yellow-200 rounded mb-2 flex items-center justify-center">
+                    <Icon name="Users" size={32} className="text-yellow-500" />
                   </div>
                   <p className="text-sm text-slate-600 font-open-sans">
                     Воспоминание #{i}
